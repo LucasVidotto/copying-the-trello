@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tarefas </title>
+
+</head>
+
+<body>
+    <div class="board">
+        <h3>
+            A fazer
+        </h3>
+        <ul id="todo" ondrop="drop(event, this.id)" ondragover="over(event)">
+            <li id="one" draggable="true" ondragstart="drag(event)">
+                <p>Dormir</p>
+                <p class="remove" onclick="removeCard(this)">x</p><!-- pegando quem chamou a funlçao (this) -->
+            </li>
+            <li id="two" draggable="true" ondragstart="drag(event)">
+                <p>Ver Tv</p>
+                <p class="remove" onclick="removeCard(this)">x</p>
+            </li>
+        </ul>
+        <div class="add-card" onclick="addCard(this)">
+            <p> Adicionar tarefa</p>
+        </div>
+    </div>
+    <div class="board">
+        <h3>Fazendo</h3>
+        <ul id="doing" ondrop="drop(event, this.id)" ondragover="over(event)">
+
+        </ul>
+        <div class="add-card" onclick="addCard(this)">
+            <p> Adicionar tarefa</p>
+        </div>
+    </div>
+    <div class="board">
+        <h3>
+            Entregue
+        </h3>
+        <ul id="done" ondrop="drop(event, this.id)" ondragover="over(event)">
+
+        </ul>
+        <div class="add-card" onclick="addCard(this)">
+            <p> Adicionar tarefa</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

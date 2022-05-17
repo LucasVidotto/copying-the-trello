@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+body {
+    /*background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    */
+    background: url('https://wallpaperaccess.com/full/2159510.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.board {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 320px;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    animation: move 3s;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(100px);
+        background-color: transparent;
+    }
+
+    to {
+        transform: translateY(0px);
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+h3 {
+    background-color: #457bbb;
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    border-radius: 5px;
+    animation: movecolors 3s;
+}
+
+@keyframes movecolors {
+    from {
+        background-color: transparent;
+    }
+
+    to {
+        background-color: #457bbb;
+    }
+}
+
+.add-card {
+    background-color: rgba(200, 200, 200, 0.6);
+    margin: 4px;
+    border-radius: 3px;
+}
+
+.add-card:hover {
+    cursor: pointer;
+    background-color: rgba(100, 100, 100, 0.8);
+}
+
+.add-card p {
+    font-size: 16px;
+    padding: 0 6px;
+    font-weight: 100;
+}
+
+ul {
+    list-style-type: none;
+    min-height: 380px;
+    padding: 2px;
+    display: flex;
+    /*coloca os elementos na horizontal*/
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+li {
+    background-color: white;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    min-width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 10px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+li:hover {
+    cursor: move;
+}
+
+.remove {
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    color: #c3c3c3;
+}
+
+.remove:hover {
+    cursor: pointer;
+    background-color: #4231e4;
+    color: black;
+}
